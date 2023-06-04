@@ -1,1 +1,4 @@
 venv
+app/token.json
+app/credentials.json
+.env
