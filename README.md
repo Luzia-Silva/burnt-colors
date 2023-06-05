@@ -8,7 +8,12 @@ Para lidar com esse desafio, criamos um algoritmo utilizando a biblioteca OpenCV
 
 Esses dados são salvos em uma planilha no Google Sheets como base para outras análises. Todos esses dados são coletados para que seja possível calcular a média, o maior e o menor valor encontrados.
 
-Com base nesses resultados, estabelecemos a seguinte lógica: valores menores do que o menor valor encontrado são classificados como "Grau I de queimadura", enquanto valores maiores do que o valor encontrado são classificados como "Grau II de queimadura". No entanto, é importante ressaltar que esse trabalho não busca uma análise exata dos graus de queimaduras, mas sim o processamento de uma pequena quantidade de dados que pode permitir que o algoritmo gere análises inteligentes.
+Com base nesses resultados, estabelecemos a seguinte lógica: 
+    1. Se o valor gerado pela análise da cor vermelha for maior que o menor valor encontrado até o momento, então a queimadura é classificada como Grau I.
+    2. Se o valor gerado pela análise da cor vermelha for menor ou igual ao maior valor encontrado até o momento, então a queimadura é classificada como Grau II.
+    3. Se um valor não foi encontrado durante a análise, o algoritmo precisa ser executado novamente para que o dado seja inserido e a análise seja feita corretamente.
+    4. Se nenhuma das condições acima for atendida, isso significa que o algoritmo não pode realizar análises de queimaduras de Grau III.
+Essas regras são para definir um sistema para classificar queimaduras em Grau I e Grau II com base na análise da cor vermelha. Se nenhuma das condições for atendida ou se a queimadura for de Grau III, o algoritmo não será capaz de fazer a análise. 
 
 Esse projeto openSource para que as comunidade possam implementar melhorias e trazer inovações e até mesmo a conexão com banco de dados que suportam uma quantidade mais robusta de dados.
 
@@ -41,7 +46,6 @@ Linux:
 # Depêndencias
 
 - [Opencv-python](https://opencv.org/) - versão 4.7.0.72
-- [Matplotlib](https://matplotlib.org/) - versão 3.7.1
 - [Numpy](https://numpy.org/) - versão 1.24.3
 - [Google-api-python-client](https://developers.google.com/sheets/api/guides/libraries?hl=pt-br#python) - vers3.10.6
 

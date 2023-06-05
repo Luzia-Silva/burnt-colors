@@ -1,11 +1,8 @@
 import cv2
 import cv2
-import matplotlib
-import matplotlib.pyplot as plt
 import numpy as np
 
 def DegreesOfBurns():
-  matplotlib.use('TkAgg') 
   image = cv2.imread("images/BLOG703334.jpg") # Carregar imagem 
   image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB) # Colocando cor da imagem
   image_array = np.array(image) # Converta a imagem para um array NumPy
@@ -30,14 +27,14 @@ def AnalyzesTheBurns(burn_value, burns_values):
         bigger = np.max(values)
         smaller = np.min(values)
         median = np.median(values)
-        if str(smaller) <= str(burn_value):
-            print(" \n 1º grau: atinge a epiderme (camada superficial da pele).")
+        if str(smaller) < str(burn_value):
+            print(" \n 1º grau: atinge a epiderme (camada superficial da pele)." + str(burn_value))
             print("\n Dados encontrados: \n MÉDIA:" + str(median) + " \n MAIOR:" + str(bigger) + "\n MENOR:" + str(smaller) + "\n\n")
         elif str(bigger) <= str(burn_value):
-            print("\n 2º grau: atinge a epiderme e parte da derme (2ª camada da pele). \n Há presença de bolhas, e uma vermelhidão mais intensa e a dor é acentuada;")
+            print("\n 2º grau: atinge a epiderme e parte da derme (2ª camada da pele). \n Há presença de bolhas, e uma vermelhidão mais intensa e a dor é acentuada;" + str(burn_value))
             print("\n Dados encontrados: \n MÉDIA:" + str(median) + " \n MAIOR:" + str(bigger) + "\n MENOR:" + str(smaller) + "\n\n")
         else:
-            print("\n Nosso sistema não é capaz de realizar essa análises ápos 2º de grau de queimadura.\n\n")
+            print("Não encontramos o seu grau de acordo com os nosso dados, entretando pode ser que após a entrada de mais um dado ele tenha resultado como Grau I ou II\n\n")
       else: 
           print("\n\n Essa é seu primeiro dado em nossa base, faça carregamento de mais dados para obter análises de MÉDIA, MAIOR E MENOR valores!\n")
     
