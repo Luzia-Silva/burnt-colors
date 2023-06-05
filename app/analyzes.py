@@ -37,7 +37,7 @@ def AnalyzesTheBurns(burn_value, burns_values):
             print("\n 2º grau: atinge a epiderme e parte da derme (2ª camada da pele). \n Há presença de bolhas, e uma vermelhidão mais intensa e a dor é acentuada;")
             print("\n Dados encontrados: \n MÉDIA:" + str(median) + " \n MAIOR:" + str(bigger) + "\n MENOR:" + str(smaller) + "\n\n")
         else:
-            print("\n Nosso sistema não é capaz de realizar essa análises ápos 2º de grau de queimadura.")
+            print("\n Nosso sistema não é capaz de realizar essa análises ápos 2º de grau de queimadura.\n\n")
       else: 
           print("\n\n Essa é seu primeiro dado em nossa base, faça carregamento de mais dados para obter análises de MÉDIA, MAIOR E MENOR valores!\n")
     
