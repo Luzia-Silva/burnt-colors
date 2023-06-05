@@ -47,10 +47,8 @@ Linux:
 
 - [Opencv-python](https://opencv.org/) - versão 4.7.0.72
 - [Numpy](https://numpy.org/) - versão 1.24.3
-- [Google-api-python-client](https://developers.google.com/sheets/api/guides/libraries?hl=pt-br#python) - vers3.10.6
+- [Google-api-python-client](https://developers.google.com/sheets/api/guides/libraries?hl=pt-br#python) - versão 3.10.6
 
-
-# Resultados 
 
 <br>
  <h3 align="center">
