@@ -30,10 +30,10 @@ def AnalyzesTheBurns(burn_value, burns_values):
         bigger = np.max(values)
         smaller = np.min(values)
         median = np.median(values)
-        if str(burn_value) <= str(smaller):
+        if str(smaller) <= str(burn_value):
             print(" \n 1º grau: atinge a epiderme (camada superficial da pele).")
             print("\n Dados encontrados: \n MÉDIA:" + str(median) + " \n MAIOR:" + str(bigger) + "\n MENOR:" + str(smaller) + "\n\n")
-        elif str(self.burn_value) <= str(bigger):
+        elif str(bigger) <= str(burn_value):
             print("\n 2º grau: atinge a epiderme e parte da derme (2ª camada da pele). \n Há presença de bolhas, e uma vermelhidão mais intensa e a dor é acentuada;")
             print("\n Dados encontrados: \n MÉDIA:" + str(median) + " \n MAIOR:" + str(bigger) + "\n MENOR:" + str(smaller) + "\n\n")
         else:

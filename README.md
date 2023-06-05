@@ -45,6 +45,9 @@ Linux:
 - [Numpy](https://numpy.org/) - versão 1.24.3
 - [Google-api-python-client](https://developers.google.com/sheets/api/guides/libraries?hl=pt-br#python) - vers3.10.6
 
+
+# Resultados 
+
 <br>
  <h3 align="center">
       <p>Copyright © 2023 Girludev Company</p>
